@@ -1,6 +1,7 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
 import { connect } from "react-redux";
+import {actionCreators} from './store/';
 import {
   HeaderWapper,
   Logo,
@@ -9,7 +10,10 @@ import {
   NavSearch,
   Addition,
   Button,
-  SearchWrapper
+  SearchWrapper,
+  SearchInfo,
+  SearchInfoTitle,
+  SearchInfoSwitch
 } from "./style";
 
 const Header = props => {
@@ -34,6 +38,11 @@ const Header = props => {
                 : "iconfont iconfangdajing"
             }
           />
+          <SearchInfo> 
+            <SearchInfoTitle>热门搜索
+            <SearchInfoSwitch>换一批</SearchInfoSwitch>
+            </SearchInfoTitle>
+          </SearchInfo>
         </SearchWrapper>
         <NavItem className="right">登陆</NavItem>
         <NavItem className="right">
@@ -52,22 +61,17 @@ const Header = props => {
 };
 const mapStateToProps = state => {
   return {
-    focused: state.focused
+    //store 是 immutable 对象
+    focused: state.get('header').get('focused')
   };
 };
 const mapDispathToProps = dispatch => {
   return {
     inputFocus() {
-      const action = {
-        type: "search_focus"
-      };
-      dispatch(action);
+      dispatch(actionCreators.inputFocus());
     },
     inputBlur() {
-      const action = {
-        type: "search_blur"
-      };
-      dispatch(action);
+      dispatch(actionCreators.inputBlur());
     }
   };
 };
