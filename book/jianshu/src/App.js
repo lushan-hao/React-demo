@@ -14,16 +14,14 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <div>
           <GlobalStyled />
-          <Header />
           <BrowserRouter>
+          <Header />
             <div>
               <Route path="/" exact component={Home}/>
               <Route path="/detail" exact component={Detail}/>
             </div>
           </BrowserRouter>
-        </div>
       </Provider>
     </div>
   );

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { HostWrapper, HostItem } from './../style';
 
-class Host extends Component {
+class Host extends PureComponent {
   render() {
 		return (
 			<HostWrapper>
