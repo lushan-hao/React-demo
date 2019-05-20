@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { WriterWrapper } from '../style';
 
 class Writer extends Component {
-  render() {
-    return (
-      <div>z 
-      </div>
-    );
-  }
+
+	render() {
+		return (
+			<WriterWrapper>HomeWork</WriterWrapper>
+		)
+	}
 }
 
 export default Writer;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HomeWrapper, HomeWrapperRight, HomeWrapperLeft } from "./style";
+import { HomeWrapper, HomeWrapperRight, HomeWrapperLeft} from "./style";
 import Topic from './component/Topic';
 import Host from './component/Host';
 import Writer from './component/Writer';
