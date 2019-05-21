@@ -36,7 +36,6 @@ export const getMoreList = (page) => {
       const result = res.data.data;
       const  page1 = page + 1;
       dispatch(addHomeList(result, page1));
-      console.log(page);
 		});
 	}
 }
