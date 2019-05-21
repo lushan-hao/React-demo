@@ -1,5 +1,7 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
+import "antd/dist/antd.css";
+import { Carousel } from "antd";
 import {
   HomeWrapper,
   HomeWrapperRight,
@@ -17,15 +19,30 @@ class Home extends PureComponent {
     window.scrollTo(0, 0);
   }
   render() {
+    const settings = {
+      speed: 500
+    };
     return (
       <div>
         <HomeWrapper>
           <HomeWrapperLeft>
-            <img
-              className="banner-img"
-              alt=""
-              src="//upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
-            />
+            <Carousel {...settings} autoplay>
+              <img
+                className="banner-img"
+                alt=""
+                src="https://upload.jianshu.io/admin_banners/web_images/4592/22f5cfa984d47eaf3def6a48510cc87c157bf293.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+              />
+              <img
+                className="banner-img"
+                alt=""
+                src="//upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+              />
+              <img
+                className="banner-img"
+                alt=""
+                src="https://upload.jianshu.io/admin_banners/web_images/4660/224da83c76e01d5deff07e163615921233af5c82.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+              />
+            </Carousel>
             <Topic />
             <List />
           </HomeWrapperLeft>

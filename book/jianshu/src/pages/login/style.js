@@ -12,7 +12,7 @@ export const LoginWrapper = styled.div`
 
 export const LoginBox = styled.div`
 	width: 400px;
-	height: 180px;
+	height: 240px;
 	margin: 100px auto;
 	padding-top: 20px;
 	background: #fff;
@@ -22,7 +22,7 @@ export const LoginBox = styled.div`
 export const Input = styled.input`
 	display: block;
 	width: 200px;
-	height: 30px;
+	height: 40px;
 	line-height: 30px;
 	padding: 0 10px;
 	margin: 10px auto;
@@ -30,13 +30,13 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.div`
-	width: 220px;
-	height: 30px;
-	line-height: 30px;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
 	color: #fff;
 	background: #3194d0;
-	border-radius: 15px;
-	margin: 10px auto;
+	border-radius: 5px;
+	margin: 30px auto;
 	text-align: center;
 	cursor: pointer;
 `;

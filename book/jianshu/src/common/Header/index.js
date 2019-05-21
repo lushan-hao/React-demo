@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { actionCreators } from "./store/";
 import { actionCreators as loginActionCreators } from "../../pages/login/store";
+import { message} from 'antd';
 import {
   HeaderWapper,
   Logo,
@@ -66,6 +67,15 @@ class Header extends Component {
     }
   }
   render() {
+    const info = () => {
+      message.info('这就是首页');
+    };
+    const info1 = () => {
+      message.info('正在推出ing');
+    };
+    const info3 = () => {
+      message.info('不用注册，登陆就行，账号密码你随意');
+    };
     const { focused, inputBlur, inputFocus, list, login, logout } = this.props;
     return (
       <HeaderWapper>
@@ -73,8 +83,8 @@ class Header extends Component {
           <Logo />
         </Link>
         <Nav>
-          <NavItem className="left active">首页</NavItem>
-          <NavItem className="left">下载APP</NavItem>
+          <NavItem onClick={info} className="left active">首页</NavItem>
+          <NavItem onClick={info1}  className="left">下载APP</NavItem>
 
           {login ? (
             <NavItem onClick={logout} className="right">
@@ -114,7 +124,7 @@ class Header extends Component {
             </Button>
           </Link>
 
-          <Button className="reg">注册</Button>
+          <Button onClick={info3} className="reg">注册</Button>
         </Addition>
       </HeaderWapper>
     );

@@ -4,7 +4,8 @@ import logoSrc from "../../statics/logo.png";
 export const HeaderWapper = styled.div`
   position: relative;
   height: 56px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  z-index: 99;
 `;
 export const Logo = styled.div`
   position: absolute;
@@ -43,6 +44,7 @@ export const NavItem = styled.div`
 export const SearchWrapper = styled.div`
   float: left;
   position: relative;
+  z-index: 99;
   .a {
     position: absolute;
     right: 5px;
@@ -95,9 +97,9 @@ export const NavSearch = styled.input.attrs({
 
 export const SearchInfo = styled.div`
   position: absolute;
-  left: 0;
+  left: 20px;
   top: 56px;
-  width: 240px;
+  width: 260px;
   padding: 0 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   background: #fff;
@@ -158,6 +160,7 @@ export const Button = styled.div`
   margin-right: 20px;
   padding: 0 20px;
   font-size: 14px;
+  cursor: pointer;
   &.reg {
     color: #ec6149;
   }
