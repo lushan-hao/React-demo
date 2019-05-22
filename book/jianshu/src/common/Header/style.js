@@ -3,7 +3,7 @@ import logoSrc from "../../statics/logo.png";
 
 export const HeaderWapper = styled.div`
   position: relative;
-  height: 56px;
+  height: 57px;
   border-bottom: 1px solid #ddd;
   z-index: 99;
 `;
@@ -16,6 +16,8 @@ export const Logo = styled.div`
   height: 56px;
   background: url(${logoSrc});
   background-size: contain;
+  z-index: -999;
+  overflow: hidden;
 `;
 export const Nav = styled.div`
   width: 960px;
