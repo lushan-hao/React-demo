@@ -22,7 +22,7 @@ function App() {
             <div>
               <Route path="/" exact component={Home}/>
               <Route path='/login' exact component={Login}></Route>
-              <Route path='/detail/:id' exact component={Detail}></Route>
+              <Route path='/:id' exact component={Detail}></Route>
               <Route path='/write' exact component={Write}></Route>
             </div>
           </BrowserRouter>
