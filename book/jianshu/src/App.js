@@ -5,7 +5,7 @@ import "./style.js";
 import "./statics/iconfont/iconfont.css";
 import store from "./store";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
+import {HashRouter, Route } from "react-router-dom";     //, BrowserRouter
 import Home from './pages/home/index';
 import Detail from './pages/detail/loadable.js';
 import Login from './pages/login';
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
           <GlobalStyled />
-          <BrowserRouter>
+          <HashRouter>
           <Header />
             <div>
               <Route path="/" exact component={Home}/>
@@ -25,7 +25,7 @@ function App() {
               <Route path='/:id' exact component={Detail}></Route>
               <Route path='/write' exact component={Write}></Route>
             </div>
-          </BrowserRouter>
+          </HashRouter>
       </Provider>
     </div>
   );
