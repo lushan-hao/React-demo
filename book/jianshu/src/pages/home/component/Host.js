@@ -6,7 +6,7 @@ import { message} from 'antd';
 class Host extends PureComponent {
   render() {
 	const info = () => {
-		message.info('别去那个页面了，很尴尬');
+		message.info('别去那个页面了，暂未开发');
 	  };
 		return (
 			<HostWrapper>

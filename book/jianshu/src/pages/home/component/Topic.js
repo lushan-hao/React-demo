@@ -9,8 +9,8 @@ class Topic extends PureComponent {
     return (
 			<TopicWrapper>
 				{
-					list.map((item) => (
-						<TopicItem key={item.get('id')}>
+					list.map((item,index) => (
+						<TopicItem key={index}>
 							<img
 								className='topic-pic'
 								src={item.get('imgUrl')}
