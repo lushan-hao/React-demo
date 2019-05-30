@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import timg from "../../statics/timg.jpg";
 
 export const Writeb = styled.div`
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 56px;
   left: 0;
   bottom: 0;
   right: 0;
