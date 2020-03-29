@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 // import TodoList from './TodoList';
 import * as serviceWorker from './serviceWorker';
 // import AList from './AList';
-import List from './List';
+import Cin from './Cin';
+// import List from './List';
 import {Provider} from 'react-redux';
 import store1 from './store1';
 
 const APP = (
     <Provider store = {store1}>
-        <List />
+        <Cin />
     </Provider>
 )
 
